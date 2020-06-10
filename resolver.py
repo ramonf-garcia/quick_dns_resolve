@@ -9,7 +9,7 @@ def resolve_domain(domain, app_log, error_log, record='A', retry=10, timeout=10)
     results = {}
     try:
         resolver = Resolver(
-            NAMESERVERS,
+            nameservers=NAMESERVERS,
             tries=retry,
             timeout=timeout,
             qname=record,
